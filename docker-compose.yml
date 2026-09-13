@@ -70,10 +70,8 @@ services:
       context: .
       target: runner-base
     image: omniroute:base
-    ports:
-      - "${DASHBOARD_PORT:-20128}:${DASHBOARD_PORT:-20128}"
-      - "${API_PORT:-20129}:${API_PORT:-20129}"
     # Default service for Coolify and plain `docker compose up -d`.
+    # Ports stay internal; Coolify proxy reaches service over Docker network.
     # ponytail: keep optional profiles for heavier variants; base must start by default.
 
   # ── Profile: web (runner-web + Chromium/Playwright) ────────────────
