@@ -73,8 +73,8 @@ services:
     ports:
       - "${DASHBOARD_PORT:-20128}:${DASHBOARD_PORT:-20128}"
       - "${API_PORT:-20129}:${API_PORT:-20129}"
-    profiles:
-      - base
+    # Default service for Coolify and plain `docker compose up -d`.
+    # ponytail: keep optional profiles for heavier variants; base must start by default.
 
   # ── Profile: web (runner-web + Chromium/Playwright) ────────────────
   # Required for web-cookie providers (gemini-web, claude-web, claude-turnstile).
