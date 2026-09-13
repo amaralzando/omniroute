@@ -343,6 +343,9 @@
       "prettier --write"
     ]
   },
+  "allowScripts": {
+    "better-sqlite3": true
+  },
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",
